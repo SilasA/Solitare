@@ -153,10 +153,20 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="CardStack.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Resources.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SFML Project.cpp" />
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="CardStack.cpp" />
+    <ClCompile Include="Resources.cpp" />
+    <ClCompile Include="Solitare.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Game.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

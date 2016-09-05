@@ -1,11 +1,12 @@
-// SFML Project.cpp : Defines the entry point for the console application.
+// Solitare.cpp : Defines the entry point for the console application.
 //
 // --TEMPLATE FOR SFML PROJECT--
 
-#include <SFML\Graphics.hpp>
+#include "Resources.h"
 
 int main()
 {
+	Resources::Init();
 	sf::RenderWindow window;
 
 	while (window.isOpen())
