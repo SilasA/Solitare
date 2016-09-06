@@ -1,6 +1,5 @@
 #include "Card.h"
 
-
 Card::Card(sf::Sprite* sprite, 
 	sf::Sound* sound, 
 	CardValue value, 
@@ -11,7 +10,7 @@ Card::Card(sf::Sprite* sprite,
 {
 }
 
-Card::Card(Card::data& dat) :
+Card::Card(const Card::data& dat) :
 	m_cardval(dat.cv), m_cardsuit(dat.cs), m_isBlack(dat.isBlack)
 {
 }
