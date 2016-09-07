@@ -19,7 +19,7 @@ void Resources::Init()
 				sf::Sprite(tex, sf::IntRect(x, y, CARD_WIDTH, CARD_HEIGHT)));
 			x += 140;
 		}
-			y += 190;
+		y += 190;
 	}
 }
 
