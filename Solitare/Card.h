@@ -36,10 +36,12 @@ private:
 	sf::Sprite* m_graphic;
 	sf::Sound* m_sound; 
 
+	std::string m_id;
+
 	CardValue m_cardval;
 	CardSuit  m_cardsuit;
 	bool	  m_isBlack;
-	bool	  m_uncovered;
+	bool	  m_covered;
 
 public:
 	// Type for data
@@ -62,13 +64,22 @@ public:
 		sf::Sound* sound, 
 		CardValue value, 
 		CardSuit suit,
-		bool uncovered = false);
+		bool covered = true);
 	Card(const Card::data& dat);
 	~Card();
 
 	inline bool IsBlack() { return m_isBlack; }
 	inline CardValue GetValue() { return m_cardval; }
 	inline CardSuit GetSuit() { return m_cardsuit; }
+
+	inline sf::Sprite* GetSprite() { return m_graphic; }
+	inline sf::Sound* GetSound() { return m_sound; }
+
+	inline std::string& GetID() { return m_id; }
+	void SetID(std::string& id);
+
+	void SetCovered(bool covered) { m_covered = covered; }
+	bool IsCovered() { return m_covered; }
 
 	inline data GetCardData() const { return data(m_cardval, m_cardsuit, m_isBlack); }
 

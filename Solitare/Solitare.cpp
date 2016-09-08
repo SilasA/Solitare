@@ -3,11 +3,14 @@
 // --TEMPLATE FOR SFML PROJECT--
 
 #include "Resources.h"
+#include "Game.h"
 
 int main()
 {
 	Resources::Init();
 	sf::RenderWindow window;
+
+	Game game;
 
 	while (window.isOpen())
 	{

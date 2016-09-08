@@ -13,7 +13,12 @@ public:
 	typedef std::vector<Card>::iterator CS_itr;
 
 	CardStack(std::vector<Card>& cardStack);
+	CardStack();
 	~CardStack();
+
+	Card& operator[](unsigned int i) { return m_cardStack[i]; }
+
+	Card& Find(const Card::data& dat);
 
 	static bool TransferCards(
 		std::vector<Card>& first, 
@@ -22,7 +27,8 @@ public:
 	static bool TransferCards(
 		std::vector<Card>& first,
 		std::vector<Card>& second,
-		uint16_t startIdx);
+		uint16_t startIdx,
+		int16_t endIdx = -1);
 };
 
 // Returns a CardStack representing a Full 52 deck of cards

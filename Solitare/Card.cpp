@@ -1,4 +1,5 @@
 #include "Card.h"
+#include "Resources.h"
 
 Card::Card(sf::Sprite* sprite, 
 	sf::Sound* sound, 
@@ -11,13 +12,22 @@ Card::Card(sf::Sprite* sprite,
 }
 
 Card::Card(const Card::data& dat) :
-	m_cardval(dat.cv), m_cardsuit(dat.cs), m_isBlack(dat.isBlack)
+	m_cardval(dat.cv), m_cardsuit(dat.cs), m_isBlack(dat.isBlack),
+	m_sound(Resources::GetSound("card"))
 {
+	
 }
 
 
 Card::~Card()
 {
+}
+
+
+void Card::SetID(std::string& id)
+{
+	m_id = id;
+	m_graphic = Resources::GetGraphic(m_id);
 }
 
 
