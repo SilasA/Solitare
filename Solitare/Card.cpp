@@ -5,7 +5,7 @@ Card::Card(sf::Sprite* sprite,
 	sf::Sound* sound, 
 	CardValue value, 
 	CardSuit suit, 
-	bool uncovered = false) :
+	bool uncovered) :
 	m_graphic(sprite), m_sound(sound), m_cardval(value), m_cardsuit(suit),
 	m_isBlack(suit == CardSuit::Clubs || suit == CardSuit::Spades)
 {

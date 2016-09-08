@@ -10,8 +10,6 @@ int main()
 	Resources::Init();
 	sf::RenderWindow window;
 
-	Game game;
-
 	while (window.isOpen())
 	{
 		sf::Event event;

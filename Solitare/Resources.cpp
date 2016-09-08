@@ -1,5 +1,7 @@
 #include "Resources.h"
 
+std::map<std::string, sf::Sprite> Resources::m_sprites;
+std::map<std::string, sf::Sound> Resources::m_sounds;
 
 void Resources::Init()
 {

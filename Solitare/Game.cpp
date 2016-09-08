@@ -28,9 +28,9 @@ Game::~Game()
 {
 }
 
-void Game::HandleInput(sf::Event& event)
+void Game::HandleInput(sf::RenderWindow& window, sf::Event& event)
 {
-
+	m_mousePos = sf::Mouse::getPosition(window);
 }
 
 void Game::Draw(sf::RenderWindow& window)

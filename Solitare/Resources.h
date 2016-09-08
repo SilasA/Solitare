@@ -9,7 +9,7 @@
 #define CARD_WIDTH 140
 
 const char CARD_VALUES[13] { 'A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K' };
-const char CARD_SUITS[4]{ 'C', 'H', 'D', 'S' };
+const char CARD_SUITS[4]   { 'C', 'H', 'D', 'S' };
 
 const sf::IntRect BLUE_BG_RECT	{ 0, 1820, CARD_WIDTH, CARD_HEIGHT };
 const sf::IntRect GREEN_BG_RECT { CARD_HEIGHT, 1820, CARD_WIDTH, CARD_HEIGHT };

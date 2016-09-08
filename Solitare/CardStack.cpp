@@ -50,7 +50,7 @@ bool CardStack::TransferCards(
 
 bool CardStack::TransferCards(
 	std::vector<Card>& first, std::vector<Card>& second,
-	uint16_t startIdx, int16_t endIdx = -1)
+	uint16_t startIdx, int16_t endIdx)
 {
 	if (startIdx >= first.size()) return false;
 	if (endIdx < 0) endIdx = startIdx;
