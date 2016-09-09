@@ -29,6 +29,9 @@ public:
 	static bool SetGraphic(const std::string& key, const sf::Sprite& sprite);
 	static bool GetSound(const std::string& key, const sf::Sound& sound);
 
+	static inline std::map<std::string, sf::Sprite>& GetGraphicMap() { return m_sprites; }
+	static inline std::map<std::string, sf::Sound>& GetSoundMap() { return m_sounds; }
+
 	static inline sf::Sprite* GetGraphic(const std::string& key) 
 	{
 		if (m_sprites.find(key) == m_sprites.end()) return nullptr;
